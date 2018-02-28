@@ -8,12 +8,14 @@ they /should/ be relative to the nested directory.
 
 ## Steps to reproduce
 
-1. Create `dir/DOC.md` in browser editor
+1. **Create** `dir/DOC2.md` in browser editor
 2. Add image tag with source 'image.png'
 3. Preview in browser editor (looks good)
 4. Save
 5. View file (looks bad)
 
-## Suggested behavior
+> **NOTE:** editing an existing file resolves relative paths correctly.  This bug is only expressed during file creation.
 
-Paths in editor preview should be expressed relative to nested directory.
+## Desierd behavior
+
+Resolve relative paths consistently in create+editor, edit+editor, and source browser.  That is, resolve relative to current directory.
